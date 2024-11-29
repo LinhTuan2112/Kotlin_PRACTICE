@@ -1,7 +1,9 @@
 fun main(args: Array<String>) {
+    println(checkSnt(1))
     while (true)
     {
-        var choose:Int;
+        var choose:Int
+
         println("1. Tính tổng các chữ số của n")
         println("2. Phân tích n thành các thừa số nguyên tố")
         println("3. Liệt kê các ước số của n")
@@ -26,27 +28,28 @@ fun main(args: Array<String>) {
 
 fun tinhTong()
 {
-    var n:Int;
-    var sum:Int = 0;
-    var s:String? = readLine();
+    var n:Int?
+    var sum:Int = 0
+    var s:String? = readLine()
+
     if(s!=null)
     {
-        n = s.toInt();
+        n = s.toInt()
         while (n != 0)
         {
-            sum+=n%10;
-            n/=10;
+            sum+=n%10
+            n/=10
         }
     }
     println("Tổng các chữ số của n là :$sum")
 }
 fun phanTich()
 {
-    var n:Int;
-    var s:String? = readLine();
+    var n:Int
+    var s:String? = readLine()
     if(s!=null)
     {
-        n = s.toInt();
+        n = s.toInt()
         print("Các thừa số nguyên tố của $n là: ")
         var i:Int = 2
         while (n != 1)
@@ -104,6 +107,7 @@ fun lietKeSnt()
 }
 fun checkSnt(n:Int): Boolean
 {
+
     for(i in 2..n/2)
     {
         if(n%i==0)
