@@ -28,5 +28,4 @@ fun main(args: Array<String>) {
 
     qlcb.hienThiDanhSachCB()
 
-
 }
